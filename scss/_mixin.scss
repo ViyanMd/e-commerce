@@ -1,0 +1,16 @@
+@mixin media($width) {
+    @media screen and(max-width: $width) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media screen and(max-width: 1300px) {
+        @content;
+    }
+}
+
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+}

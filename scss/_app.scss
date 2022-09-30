@@ -1,0 +1,68 @@
+.app__section {
+    @include flex(row);
+    width: 100%;
+    padding: 10% 15%;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+
+    @include laptop {
+            margin-top: 75rem;
+            flex-direction: column;
+    }
+
+}
+
+.app__section_decor-left {
+    position: absolute;
+    left: 0;
+    bottom: -1;
+
+    @include laptop {
+            display: none;
+    }
+}
+
+
+.app__section_decor-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    @include laptop {
+        display: none;
+    }
+}
+
+.app__description {
+    @include flex(column);
+    align-items: center;
+    text-align: center;
+    .app__description_header {
+        font-family: $bold;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .app__description_content {
+        font-family: $regular;
+        font-size: 1.6rem;
+        color: #0f001a61;
+    }
+
+    .app__links {
+        display: flex;
+        gap: 2rem;
+        margin-top: 7rem;
+
+        @include laptop {
+            width: 12rem;
+            height: 4rem;
+        }
+    }
+
+
+    @include laptop {
+        width: 80%;
+    }
+}

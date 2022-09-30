@@ -1,0 +1,131 @@
+.reviews__section {
+    position: relative;
+    margin-top: 10rem;
+    width: 100%;
+    .reviews__section_header {
+        color: #0F001A;
+        font-family: $bold;
+        font-size: 2.6rem;
+        text-align: center;
+    }
+
+    .dots {
+        z-index: -100;
+        position: absolute;
+        right: 0;
+        top: 50%;
+
+        @include laptop {
+            display: none;
+        }
+    }
+}
+
+.reviews__container {
+    @include flex(row);
+    margin-top: 10rem;
+    max-height: 40rem;
+
+    @include laptop {
+        margin-top: 14rem;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.model {
+    min-height: 40rem;
+    width: 85%;
+    background-color: #4a9ad32e;
+    position: relative;
+    img {
+        position: absolute;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto;
+        bottom: 0;
+        transform: scale(1);
+    }
+}
+
+
+
+.reviews {
+    @include flex(column);
+    padding: 10rem;
+    position: relative;
+    & > * {
+        width: 65%;
+    }
+
+    .quotes {
+        width: 5rem;
+        height: auto;
+        margin-bottom: 5rem;
+    }
+    .reviews__content {
+        color: #878787;
+        font-family: $regular;
+        font-size: 1.6rem;
+
+        @include laptop {
+            text-align: center;
+    }
+    }
+
+    span {
+        margin-top: 5rem;
+        font-family: $medium;
+        font-size: 1.8rem;
+        @include laptop {
+                text-align: center;
+        }
+    }
+
+    .arrows {
+        @include flex(row);
+        height: 8rem;
+        width: 16rem;
+        position: absolute;
+        right: 20rem;
+        bottom: -5rem;
+        border-radius: 4px;
+        box-shadow: 0px 5px 28px 9px #b4b4b451;
+        max-width: 16rem;
+        max-height: 8rem;
+        background-color: transparent;
+        
+        & > * {
+            width: 100%;
+            display: grid;
+            place-content: center;
+
+            @include laptop {
+               width: 80%;
+            }
+        }
+
+        & > *:hover {
+            cursor: pointer;
+        }
+
+        .action_left {
+            background-color: $main_blue;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        @include laptop {
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    @include laptop {
+        align-items: center;
+    }
+}

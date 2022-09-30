@@ -1,0 +1,43 @@
+.howitworks {
+    @include flex(column);
+    width: 100%;
+    background-color: #4a9ad324;
+    padding: 7rem;
+    .howitworks__header {
+        color: #4A99D3;
+        font-family: $medium;
+        font-size: 2.6rem;
+        text-align: center;
+    }
+
+
+}
+
+.container {
+    margin: 0 auto;
+    margin-top: 8rem;
+    display: flex;
+    gap: 6rem;
+
+    @include media(850px) {
+        flex-direction: column
+    }
+}
+
+
+.container__cards {
+    @include flex(column);
+    align-items: center;
+    gap: 1rem;
+    .card__header {
+        margin-top: 2rem;
+        font-family: $medium;
+        font-size: 1.8rem;
+        color: #0F001A;
+    }
+    .card__content {
+        font-family: $regular;
+        font-size: 1.6rem;
+        max-width: 20ch;
+    }
+}

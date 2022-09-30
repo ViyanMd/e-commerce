@@ -1,0 +1,104 @@
+.services__section {
+    padding: 10% 15%;
+    position: relative;
+    .decor__blue {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .decor__yellow {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.services__section_main {
+    @include flex(row);
+    position: relative;
+    justify-content: space-evenly;
+    h2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 15ch;
+        font-family: $regular;
+        font-size: 3.6rem;
+        color: #260041;
+
+        @include laptop {
+            position: relative;
+    }
+    }
+    @include laptop {
+            flex-direction: column;
+            align-items: center;
+            gap: 7rem;
+    }
+}
+
+.block__left {
+    @include flex(row);
+    align-items: center;
+    @include laptop {
+        flex-direction: column;
+        gap: 7rem;
+    }
+}
+
+.block__right {
+    @include flex(column);
+    gap: 7rem;
+
+    &:nth-child(1) {
+        align-self: center;
+    }
+}
+
+.card {
+    @include flex(column);
+    justify-content: space-evenly;
+    padding: 4rem 6rem;
+    max-width: 39rem;
+    height: 52.5rem;
+    background-color: #fff;
+    box-shadow: 0px -2px 21px 5px rgba(74, 154, 211, 0.129);
+    border-radius: 1rem;
+
+    .card__description {
+        margin-top: 4rem;
+        margin-bottom: 5rem;
+
+        .card__description_header {
+            font-family: $medium;
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+        }
+    
+        .card__description_content {
+            font-family: $regular;
+            font-size: 1.6rem;
+            margin-bottom: 6rem;
+        }
+
+        .card__description_link { 
+            font-family: $medium;
+            text-decoration: none;
+            color: $main_blue;
+            font-size: 1.4rem;
+        }
+    } 
+
+    img {
+        margin: 0 auto;
+        transform: translateX(-15%);
+    }
+}
+
+.card[data-type='send'] {
+    img {
+        margin: 0 auto;
+        transform: translateY(-2rem);
+    }
+}
